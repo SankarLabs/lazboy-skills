@@ -68,10 +68,10 @@ export default function SubmitSkillPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-2xl font-bold text-gray-900 mb-6">Submit a Skill</h1>
+      <h1 className="text-2xl font-bold text-[#1B3A6B] mb-6">Submit a Skill</h1>
 
       {error && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-md">
+        <div className="mb-4 p-3 bg-[#C0392B]/5 border border-[#C0392B]/20 text-[#C0392B] text-sm rounded-md">
           {error}
         </div>
       )}
@@ -85,7 +85,7 @@ export default function SubmitSkillPage() {
               value={form.name}
               onChange={(e) => updateField('name', e.target.value)}
               placeholder="e.g. Python Best Practices"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/40"
             />
           </div>
           <div>
@@ -93,7 +93,7 @@ export default function SubmitSkillPage() {
             <select
               value={form.category_id}
               onChange={(e) => updateField('category_id', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/40"
             >
               <option value="">Select a category</option>
               {categories?.map((cat) => (
@@ -110,7 +110,7 @@ export default function SubmitSkillPage() {
             onChange={(e) => updateField('description', e.target.value)}
             placeholder="Brief description of what this skill does..."
             rows={2}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/40"
           />
         </div>
 
@@ -122,7 +122,7 @@ export default function SubmitSkillPage() {
               value={form.tag_names}
               onChange={(e) => updateField('tag_names', e.target.value)}
               placeholder="python, testing, best-practices"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/40"
             />
           </div>
           <div>
@@ -131,7 +131,7 @@ export default function SubmitSkillPage() {
               type="text"
               value={form.version}
               onChange={(e) => updateField('version', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/40"
             />
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function SubmitSkillPage() {
             <button
               type="button"
               onClick={() => setShowPreview(!showPreview)}
-              className="text-xs text-indigo-600 hover:underline"
+              className="text-xs text-[#C0392B] hover:underline"
             >
               {showPreview ? 'Edit' : 'Preview'}
             </button>
@@ -156,7 +156,7 @@ export default function SubmitSkillPage() {
               value={form.content}
               onChange={(e) => updateField('content', e.target.value)}
               rows={14}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/40"
             />
           )}
         </div>
@@ -165,7 +165,7 @@ export default function SubmitSkillPage() {
           <button
             type="submit"
             disabled={mutation.isPending}
-            className="px-6 py-2.5 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 disabled:opacity-50 transition-colors"
+            className="px-6 py-2.5 bg-[#C0392B] text-white font-medium rounded-md hover:bg-[#C0392B]/90 disabled:opacity-50 transition-colors"
           >
             {mutation.isPending ? 'Publishing...' : 'Publish Skill'}
           </button>

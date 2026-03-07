@@ -45,7 +45,7 @@ export default function BrowsePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">Browse Skills</h1>
+        <h1 className="text-2xl font-bold text-[#1B3A6B]">Browse Skills</h1>
         {data && (
           <span className="text-sm text-gray-500">{data.total} skills</span>
         )}
@@ -93,7 +93,7 @@ export default function BrowsePage() {
 
           {error && (
             <div className="text-center py-12">
-              <p className="text-red-500">Failed to load skills. Please try again.</p>
+              <p className="text-[#C0392B]">Failed to load skills. Please try again.</p>
             </div>
           )}
 

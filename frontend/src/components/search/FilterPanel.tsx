@@ -10,14 +10,14 @@ export default function FilterPanel({ selectedCategory, onCategoryChange }: Prop
 
   return (
     <div className="space-y-2">
-      <h3 className="text-sm font-semibold text-gray-700">Categories</h3>
+      <h3 className="text-sm font-semibold text-[#1B3A6B]">Categories</h3>
       <div className="space-y-1">
         <button
           onClick={() => onCategoryChange('')}
-          className={`block w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
+          className={`block w-full text-left px-3 py-1.5 rounded-md text-sm transition-colors ${
             !selectedCategory
-              ? 'bg-indigo-50 text-indigo-700 font-medium'
-              : 'text-gray-600 hover:bg-gray-100'
+              ? 'bg-[#1B3A6B]/10 text-[#1B3A6B] font-medium'
+              : 'text-[#2C2C2C]/60 hover:bg-[#1B3A6B]/5'
           }`}
         >
           All Categories
@@ -26,10 +26,10 @@ export default function FilterPanel({ selectedCategory, onCategoryChange }: Prop
           <button
             key={cat.id}
             onClick={() => onCategoryChange(cat.slug)}
-            className={`block w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
+            className={`block w-full text-left px-3 py-1.5 rounded-md text-sm transition-colors ${
               selectedCategory === cat.slug
-                ? 'bg-indigo-50 text-indigo-700 font-medium'
-                : 'text-gray-600 hover:bg-gray-100'
+                ? 'bg-[#1B3A6B]/10 text-[#1B3A6B] font-medium'
+                : 'text-[#2C2C2C]/60 hover:bg-[#1B3A6B]/5'
             }`}
           >
             {cat.name}

@@ -21,7 +21,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col bg-gray-50">
+        <div className="min-h-screen flex flex-col bg-[#FAF8F5]">
           <Header />
           <main className="flex-1">
             <Routes>

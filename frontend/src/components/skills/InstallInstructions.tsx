@@ -30,8 +30,8 @@ export default function InstallInstructions({ slug, content }: Props) {
   };
 
   return (
-    <div className="bg-gray-50 rounded-lg border border-gray-200 p-4 space-y-3">
-      <h3 className="text-sm font-semibold text-gray-700">Install</h3>
+    <div className="bg-[#FAF8F5] rounded-lg border border-gray-200 p-4 space-y-3">
+      <h3 className="text-sm font-semibold text-[#1B3A6B]">Install</h3>
 
       <button
         onClick={handleCopy}
@@ -53,7 +53,7 @@ export default function InstallInstructions({ slug, content }: Props) {
         <p className="text-xs text-gray-500 mb-1">CLI</p>
         <div
           onClick={handleCopyCommand}
-          className="flex items-center gap-2 px-3 py-2 bg-gray-900 text-gray-100 rounded-md text-xs font-mono cursor-pointer hover:bg-gray-800"
+          className="flex items-center gap-2 px-3 py-2 bg-[#1B3A6B] text-white rounded-md text-xs font-mono cursor-pointer hover:bg-[#1B3A6B]/90"
         >
           <Terminal className="w-3 h-3 shrink-0" />
           <code className="truncate">curl -o SKILL.md .../api/v1/skills/{slug}/download</code>

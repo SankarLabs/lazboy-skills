@@ -7,7 +7,7 @@ interface Props {
 
 export default function SkillContentViewer({ content }: Props) {
   return (
-    <div className="prose prose-indigo max-w-none">
+    <div className="prose max-w-none prose-headings:text-[#1B3A6B] prose-a:text-[#C0392B]">
       <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
         {content}
       </ReactMarkdown>
